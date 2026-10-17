@@ -1,0 +1,13 @@
+python : .....................
+At line:1 char:1
++ python -m unittest test_generated 2>&1 | Out-File -Encoding ascii gen 
+...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (.....................:Strin 
+   g) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+----------------------------------------------------------------------
+Ran 21 tests in 0.001s
+
+OK

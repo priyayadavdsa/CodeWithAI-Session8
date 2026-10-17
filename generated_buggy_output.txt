@@ -1,0 +1,161 @@
+python : test_average_of_empty_list_raises_error (test_generated.TestCalc
+ulateAverage.test_average_of_empty_list_raises_error) ... FAIL
+At line:1 char:1
++ python -m unittest test_generated -v 2>&1 | Out-File -Encoding ascii  
+...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (test_average_of...error) .. 
+   . FAIL:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+test_average_of_float_prices_returns_float_mean (test_generated.TestCalcu
+lateAverage.test_average_of_float_prices_returns_float_mean) ... FAIL
+test_average_of_multiple_prices_returns_mean (test_generated.TestCalculat
+eAverage.test_average_of_multiple_prices_returns_mean) ... FAIL
+test_average_of_single_price_returns_that_price (test_generated.TestCalcu
+lateAverage.test_average_of_single_price_returns_that_price) ... ERROR
+test_average_of_two_prices_returns_mean (test_generated.TestCalculateAver
+age.test_average_of_two_prices_returns_mean) ... FAIL
+test_bill_exactly_1000_returns_silver (test_generated.TestGetDiscountBand
+.test_bill_exactly_1000_returns_silver) ... ok
+test_bill_exactly_2000_returns_gold 
+(test_generated.TestGetDiscountBand.test_bill_exactly_2000_returns_gold) 
+... FAIL
+test_bill_exactly_at_minimum_returns_bronze (test_generated.TestGetDiscou
+ntBand.test_bill_exactly_at_minimum_returns_bronze) ... ok
+test_bill_just_below_1000_returns_bronze (test_generated.TestGetDiscountB
+and.test_bill_just_below_1000_returns_bronze) ... ok
+test_bill_just_below_minimum_returns_none_band (test_generated.TestGetDis
+countBand.test_bill_just_below_minimum_returns_none_band) ... ok
+test_bill_of_100_returns_none_band 
+(test_generated.TestGetDiscountBand.test_bill_of_100_returns_none_band) 
+... ok
+test_bill_of_1500_returns_silver 
+(test_generated.TestGetDiscountBand.test_bill_of_1500_returns_silver) 
+... ok
+test_bill_of_2500_returns_gold 
+(test_generated.TestGetDiscountBand.test_bill_of_2500_returns_gold) ... 
+FAIL
+test_bill_of_700_returns_bronze 
+(test_generated.TestGetDiscountBand.test_bill_of_700_returns_bronze) ... 
+ok
+test_zero_bill_returns_none_band 
+(test_generated.TestGetDiscountBand.test_zero_bill_returns_none_band) 
+... ok
+test_bill_above_minimum_is_eligible (test_generated.TestIsEligibleForDisc
+ount.test_bill_above_minimum_is_eligible) ... ok
+test_bill_below_minimum_is_not_eligible (test_generated.TestIsEligibleFor
+Discount.test_bill_below_minimum_is_not_eligible) ... ok
+test_bill_exactly_at_minimum_is_eligible (test_generated.TestIsEligibleFo
+rDiscount.test_bill_exactly_at_minimum_is_eligible) ... FAIL
+test_returns_boolean_type 
+(test_generated.TestIsEligibleForDiscount.test_returns_boolean_type) ... 
+ok
+test_zero_bill_is_not_eligible (test_generated.TestIsEligibleForDiscount.
+test_zero_bill_is_not_eligible) ... ok
+test_min_bill_is_500 
+(test_generated.TestModuleConstants.test_min_bill_is_500) ... ok
+
+======================================================================
+ERROR: test_average_of_single_price_returns_that_price (test_generated.Te
+stCalculateAverage.test_average_of_single_price_returns_that_price)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\ok\Desktop\session8\buggy_run\test_generated.py", line 
+19, in test_average_of_single_price_returns_that_price
+    self.assertAlmostEqual(calculate_average([400]), 400)
+                           ~~~~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\ok\Desktop\session8\buggy_run\shop_utils.py", line 5, 
+in calculate_average
+    return total / (len(prices) - 1)
+           ~~~~~~^~~~~~~~~~~~~~~~~~~
+ZeroDivisionError: division by zero
+
+======================================================================
+FAIL: test_average_of_empty_list_raises_error (test_generated.TestCalcula
+teAverage.test_average_of_empty_list_raises_error)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\ok\Desktop\session8\buggy_run\test_generated.py", line 
+28, in test_average_of_empty_list_raises_error
+    with self.assertRaises((ZeroDivisionError, ValueError)):
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: (<class 'ZeroDivisionError'>, <class 'ValueError'>) not 
+raised
+
+======================================================================
+FAIL: test_average_of_float_prices_returns_float_mean (test_generated.Tes
+tCalculateAverage.test_average_of_float_prices_returns_float_mean)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\ok\Desktop\session8\buggy_run\test_generated.py", line 
+25, in test_average_of_float_prices_returns_float_mean
+    self.assertAlmostEqual(calculate_average([10.5, 20.5]), 15.5)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 31.0 != 15.5 within 7 places (15.5 difference)
+
+======================================================================
+FAIL: test_average_of_multiple_prices_returns_mean (test_generated.TestCa
+lculateAverage.test_average_of_multiple_prices_returns_mean)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\ok\Desktop\session8\buggy_run\test_generated.py", line 
+16, in test_average_of_multiple_prices_returns_mean
+    self.assertAlmostEqual(calculate_average([100, 200, 300]), 200)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 300.0 != 200 within 7 places (100.0 difference)
+
+======================================================================
+FAIL: test_average_of_two_prices_returns_mean (test_generated.TestCalcula
+teAverage.test_average_of_two_prices_returns_mean)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\ok\Desktop\session8\buggy_run\test_generated.py", line 
+22, in test_average_of_two_prices_returns_mean
+    self.assertAlmostEqual(calculate_average([10, 20]), 15)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 30.0 != 15 within 7 places (15.0 difference)
+
+======================================================================
+FAIL: test_bill_exactly_2000_returns_gold 
+(test_generated.TestGetDiscountBand.test_bill_exactly_2000_returns_gold)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\ok\Desktop\session8\buggy_run\test_generated.py", line 
+58, in test_bill_exactly_2000_returns_gold
+    self.assertEqual(get_discount_band(2000), "Gold")
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'Silver' != 'Gold'
+- Silver
++ Gold
+
+
+======================================================================
+FAIL: test_bill_of_2500_returns_gold 
+(test_generated.TestGetDiscountBand.test_bill_of_2500_returns_gold)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\ok\Desktop\session8\buggy_run\test_generated.py", line 
+55, in test_bill_of_2500_returns_gold
+    self.assertEqual(get_discount_band(2500), "Gold")
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'Silver' != 'Gold'
+- Silver
++ Gold
+
+
+======================================================================
+FAIL: test_bill_exactly_at_minimum_is_eligible (test_generated.TestIsElig
+ibleForDiscount.test_bill_exactly_at_minimum_is_eligible)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\ok\Desktop\session8\buggy_run\test_generated.py", line 
+41, in test_bill_exactly_at_minimum_is_eligible
+    self.assertTrue(is_eligible_for_discount(MIN_BILL))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true
+
+----------------------------------------------------------------------
+Ran 21 tests in 0.009s
+
+FAILED (failures=7, errors=1)
