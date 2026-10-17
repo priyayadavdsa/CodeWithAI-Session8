@@ -11,3 +11,4 @@
 | get_discount_band(1500) | "Silver" | Middle band |
 | get_discount_band(700) | "Bronze" | Lowest band |
 | get_discount_band(100) | "None" | Below all bands |
+| get_discount_band(1000) | "Silver" | Exactly at Silver boundary (student-designed) |

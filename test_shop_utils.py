@@ -31,5 +31,8 @@ class TestShopUtils(unittest.TestCase):
     def test_no_band_below_all(self):
         self.assertEqual(get_discount_band(100), "None")
 
+    def test_silver_exactly_at_boundary(self):
+        self.assertEqual(get_discount_band(1000), "Silver")
+
 
 unittest.main(argv=[""], exit=False)
