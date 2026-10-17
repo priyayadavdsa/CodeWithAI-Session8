@@ -2,20 +2,20 @@ def calculate_average(prices):
     total = 0
     for p in prices:
         total = total + p
-    return total / (len(prices) - 1)
+    return total / len(prices)
 
 MIN_BILL = 500
 
 def is_eligible_for_discount(bill):
-    if bill > MIN_BILL:
+    if bill >= MIN_BILL:
         return True
     return False
 
 def get_discount_band(bill):
-    if bill >= 1000:
-        return "Silver"
-    elif bill >= 2000:
+    if bill >= 2000:
         return "Gold"
+    elif bill >= 1000:
+        return "Silver"
     elif bill >= MIN_BILL:
         return "Bronze"
     return "None"
